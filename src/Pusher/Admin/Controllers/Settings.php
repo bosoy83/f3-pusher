@@ -6,7 +6,7 @@ class Settings extends \Admin\Controllers\BaseAuth
 	use \Dsc\Traits\Controllers\Settings;
 	
 	protected $layout_link = 'Pusher/Admin/Views::settings/default.php';
-	protected $settings_route = '/admin/mailer/settings';
+	protected $settings_route = '/admin/pusher/settings';
     
     protected function getModel()
     {
