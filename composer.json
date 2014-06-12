@@ -1,0 +1,33 @@
+{
+    "name": "dioscouri/f3-pusher",
+    "type": "component",
+    "description": "Easy web sockets with pusher.com",
+    "keywords": ["F3","RAD", "Web Sockets"],
+    "homepage": "https://github.com/dioscouri/f3-pusher",
+    "license": "GPL",
+    "authors": [
+        {
+            "name": "Rafael Diaz-Tushman",
+            "email": "rdiaztushman@dioscouri.com",
+            "homepage": "http://dioscouri.com",
+            "role": "Developer"
+        },
+         {
+            "name": "Chris Frnech",
+            "email": "chris@ammonitenetworks.com",
+            "homepage": "http://ammonitenetworks.com",
+            "role": "Developer"
+        }
+
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "dioscouri/f3-lib": "dev-master",
+        "dioscouri/f3-admin": "dev-master"
+    },
+    "autoload": {
+        "psr-0": {
+            "Pusher": "src/"
+        }
+    }    
+}
