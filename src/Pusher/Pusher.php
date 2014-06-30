@@ -82,7 +82,12 @@ class Pusher
 			$this->logger->log( 'Pusher: ' . $msg );
 		}
 	}
-
+	
+	public function getPublicKey() {
+		return $this->settings['auth_key'];
+	}
+	
+	
 	/**
 	* Check if the current PHP setup is sufficient to run this class
 	*/
@@ -370,7 +375,12 @@ class Pusher
 		return json_encode( $signature );
 
 	}
-
+	
+	
+	
+	
+	
+	
 	/**
 	* Creates a presence signature (an extension of socket signing)
 	*
