@@ -16,8 +16,13 @@ class PusherBootstrap extends \Dsc\Bootstrap{
 	}
 	// dont do anything for admin
 	protected function preSite(){
-		$settings = \Pusher\Models\Settings::fetch();
+		$container = \Dsc\System::instance()->get('container');
+			
+		$container->share( 'pusher', function() {
+			$settings = \Pusher\Models\Settings::fetch();
+			return  new \Pusher\Pusher($settings->{'pusher.key'}, $settings->{'pusher.secret'}, $settings->{'pusher.app_id'});
 		
+		} );
 	}
 	
 	protected function runAdmin()
